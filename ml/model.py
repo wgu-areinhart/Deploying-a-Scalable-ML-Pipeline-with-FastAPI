@@ -4,7 +4,6 @@ from ml.data import process_data
 # TODO: add necessary import
 import pandas as pd
 import numpy as np
-import joblib
 from sklearn.ensemble import RandomForestClassifier
 
 # Optional: implement hyperparameter tuning.
@@ -56,7 +55,7 @@ def inference(model, X):
 
     Inputs
     ------
-    model : ???
+    model : sklearn.ensemble.RandomForestClassifier
         Trained machine learning model.
     X : np.array
         Data used for prediction.
@@ -66,7 +65,8 @@ def inference(model, X):
         Predictions from the model.
     """
     # TODO: implement the function
-    pass
+    preds = model.predict(X)
+    return preds
 
 def save_model(model, path):
     """ Serializes model to a file.
@@ -79,12 +79,14 @@ def save_model(model, path):
         Path to save pickle file.
     """
     # TODO: implement the function
-    pass
+    with open(path, "wb") as f:
+        pickle.dump(model, f)
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
     # TODO: implement the function
-    pass
+    with open(path, "rb") as f:
+        return pickle.load(f)
 
 
 def performance_on_categorical_slice(
