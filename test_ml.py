@@ -1,5 +1,7 @@
 import pytest
 # TODO: add necessary import
+import ml.model import train_model, inference, compute_model_metrics
+import numpy as np
 
 # TODO: implement the first test. Change the function name and input as needed
 def test_train_model_returns_correct_type():
