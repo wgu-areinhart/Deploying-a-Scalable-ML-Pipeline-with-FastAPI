@@ -2,6 +2,7 @@ import pytest
 # TODO: add necessary import
 from ml.model import train_model, inference, compute_model_metrics
 import numpy as np
+from sklearn.ensemble import RandomForestClassifier
 
 # TODO: implement the first test. Change the function name and input as needed
 def test_train_model_returns_correct_type():
@@ -24,7 +25,7 @@ def test_inference_output_type():
     X = [[0, 1], [1, 0]]
     y  = [0, 1]
     model = train_model(X, y)
-    assert isinstance(preds, np.ndarry)
+    assert isinstance(preds, np.ndarray)
 
 
 # TODO: implement the third test. Change the function name and input as needed
