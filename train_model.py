@@ -73,7 +73,7 @@ model = load_model(
     model_path
 ) 
 
-print("Loading model from {model_path}")
+print(f"Loading model from {model_path}")
 
 # TODO: use the inference function to run the model inferences on the test dataset.
 X_test, y_test, _, _ = process_data(
