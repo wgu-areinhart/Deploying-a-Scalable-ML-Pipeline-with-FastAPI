@@ -25,6 +25,7 @@ def test_inference_output_type():
     X = [[0, 1], [1, 0]]
     y  = [0, 1]
     model = train_model(X, y)
+    preds = inference(model, X)
     assert isinstance(preds, np.ndarray)
 
 
