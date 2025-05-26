@@ -65,10 +65,15 @@ save_model(model, model_path)
 encoder_path = os.path.join(project_path, "model", "encoder.pkl")
 save_model(encoder, encoder_path)
 
+print(f"Model saved to {model_path}")
+print(f"Model saved to {encoder_path}")
+
 # load the model
 model = load_model(
     model_path
 ) 
+
+print("Loading model from {model_path}")
 
 # TODO: use the inference function to run the model inferences on the test dataset.
 X_test, y_test, _, _ = process_data(
