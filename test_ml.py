@@ -1,6 +1,6 @@
 import pytest
 # TODO: add necessary import
-import ml.model import train_model, inference, compute_model_metrics
+from ml.model import train_model, inference, compute_model_metrics
 import numpy as np
 
 # TODO: implement the first test. Change the function name and input as needed
