@@ -2,7 +2,7 @@ import pytest
 # TODO: add necessary import
 
 # TODO: implement the first test. Change the function name and input as needed
-def test_train_model_returns_correct_type:
+def test_train_model_returns_correct_type():
     """
     Test that train_model returns a RandomForestClassifier
 
